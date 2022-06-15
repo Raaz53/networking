@@ -41,10 +41,10 @@ public class EncryptionAndDecryption {
                     break;
                 }
             }
-
+            
             non_position = position-key;
-            if(non_position<key){
-                non_position -= alphabet.length-1;
+            if (non_position<0){
+                non_position = alphabet.length+non_position;
             }
             temp[i] = alphabet[non_position];
         }
@@ -52,8 +52,8 @@ public class EncryptionAndDecryption {
         return decoded;
     }
     public static void main(String[] args) {
-        String text = "hellothere";
-        int key = 4;
+        String text = "zebra";
+        int key = 2;
         String encrypted = encrypt(text, key);
         String decrypted = decryption(encrypted, key);
 
