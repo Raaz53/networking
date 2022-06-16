@@ -1,6 +1,6 @@
 
 
-public class New {
+public class Caeser {
     
     public static String encrypt(String message, int key, char[] alphabet){
         int position=0, non_position;
