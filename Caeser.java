@@ -4,6 +4,7 @@ public class Caeser {
     
     public static String encrypt(String message, int key, char[] alphabet){
         int position=0, non_position;
+        String temp = message.toLowerCase();
         String cipher = "";
         for(int i = 0; i<message.length(); i++){
             for (int j=0; j<alphabet.length; j++){
